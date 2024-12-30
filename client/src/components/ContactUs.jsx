@@ -10,7 +10,7 @@ import axios from "axios";
 import { useState } from "react";
 
 const ContactUs = () => {
-  const baseurl = process.env.VITE_API_BASE_URL;
+  // const baseurl = process.env.VITE_API_BASE_URL;
   const [responseMessage, setResponseMessage] = useState(""); 
   const [isLoading, setIsLoading] = useState(false); 
 
@@ -24,7 +24,7 @@ const ContactUs = () => {
     onSubmit: async (values) => {
       setIsLoading(true); 
       try {
-        const response = await axios.post(`${baseurl}/enquiry/contact`, {
+        const response = await axios.post(`/api/enquiry/contact`, {
           fullName: values.fullName,
           contact: values.contact,
           email: values.email,

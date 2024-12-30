@@ -46,7 +46,7 @@ const cards = [
 ];
 
 const WhyChoose = () => {
-  const baseurl = process.env.VITE_API_BASE_URL;
+  // const baseurl = process.env.VITE_API_BASE_URL;
   const [responseMessage, setResponseMessage] = useState(""); 
   const [isLoading, setIsLoading] = useState(false); 
 
@@ -63,7 +63,7 @@ const WhyChoose = () => {
     onSubmit: async (values) => {
       setIsLoading(true); 
       try {
-        const response = await axios.post(`${baseurl}/enquiry`, {
+        const response = await axios.post(`/api/enquiry`, {
           customerName: values.customerName,
           originCountry: values.originCountry,
           weight: values.weight,

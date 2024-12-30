@@ -1,0 +1,48 @@
+const express = require("express");
+const helmet = require("helmet");
+const xss = require("xss-clean");
+const mongoSanitize = require("express-mongo-sanitize");
+const compression = require("compression");
+const cors = require("cors");
+const path = require("path");
+const routes = require("./router");
+
+const app = express();
+
+// set security HTTP headers
+app.use(helmet());
+
+// parse json request body
+app.use(express.json());
+
+// parse urlencoded request body
+app.use(express.urlencoded({ extended: true }));
+
+// sanitize request data
+app.use(xss());
+app.use(mongoSanitize());
+
+// gzip compression
+app.use(compression());
+
+// enable CORS
+const corsOptions = {
+  origin: "*", // you can restrict this to your frontend's domain instead of '*'
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
+
+app.use(cors(corsOptions));
+
+// v1 api routes
+app.use("/api", routes);
+app.use(express.static("../client/build"));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, '..',"client", "build", "index.html"));
+});
+app.listen(5000, () => {
+  console.log("Server Listening to port 5000");
+});
+
+module.exports = app;
