@@ -76,28 +76,29 @@ const Calculation = () => {
     },
     onSubmit: async (values) => {
       try {
-        // const response = await axios.post(
-        //   "http://3.138.140.180:3000/api/currency-convert",
-        //   {
-        //     baseCurrency: values.fromCountry,
-        //     convertCurrency: values.toCountry,
-        //     amount: values.amount,
-        //   }
-        // );
-
-        const res = await convertCurrency(
-          values.toCountry,
-          values.fromCountry,
-          values.amount
+        const response = await axios.post(
+          "/api/currency-convert",
+          {
+            baseCurrency: values.fromCountry,
+            convertCurrency: values.toCountry,
+            amount: values.amount,
+          }
         );
-        console.log(res, "res");
 
-        setData(res);
+        // const res = await convertCurrency(
+        //   values.toCountry,
+        //   values.fromCountry,
+        //   values.amount
+        // );
+        console.log(response, "res");
+
+        setData(response?.data);
       } catch (err) {
         console.log("err in currency convert", err);
       }
     },
   });
+// console.log(data);
 
   return (
     <div>
