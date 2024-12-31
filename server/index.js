@@ -11,8 +11,8 @@ const app = express();
 
 // Remove specific headers to prevent issues with HTTP testing
 app.use((req, res, next) => {
-  res.removeHeader('Cross-Origin-Opener-Policy');
-  res.removeHeader('Origin-Agent-Cluster');
+  res.setHeader('Cross-Origin-Opener-Policy', 'same-origin');
+  res.setHeader('Origin-Agent-Cluster', '?1');
   next();
 });
 
@@ -33,13 +33,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(compression());
 
 // enable CORS
-const corsOptions = {
-  origin: "*", // you can restrict this to your frontend's domain instead of '*'
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  allowedHeaders: ["Content-Type", "Authorization"],
-};
+// const corsOptions = {
+//   origin: "*", // you can restrict this to your frontend's domain instead of '*'
+//   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+//   allowedHeaders: ["Content-Type", "Authorization"],
+// };
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 // v1 api routes
 app.use("/api", routes);
