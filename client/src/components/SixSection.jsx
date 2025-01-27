@@ -4,8 +4,8 @@ import ContactUs from "./ContactUs";
 import BackgroundImage from "../assets/image/city-image.png";
 
 const SixSection = () => {
-  // const key = process.env.VITE_GOOGLE_KEY;
-  // console.log(process.env);
+  const key = process.env.REACT_APP_GOOGLE_KEY;
+  // console.log(key);
 
   return (
     <div className="px-4 sm:px-8 lg:px-[120px] bg-[#e7ecff] pt-5 lg:pt-0">
@@ -53,7 +53,7 @@ const SixSection = () => {
           title="map"
         ></iframe> */}
         <iframe
-          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDrhcHaLhqIVJOnW0pDGfUza9mH5Pn0oH8&q=Rabbit+Speed"
+          src={`https://www.google.com/maps/embed/v1/place?key=${key}&q=Rabbit+Speed`}
           className="w-full h-[200px] sm:h-[300px] lg:h-[400px]"
           style={{ border: "0" }}
           allowFullScreen=""
