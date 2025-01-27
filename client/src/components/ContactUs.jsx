@@ -93,7 +93,8 @@ const ContactUs = () => {
                 <div>
                   <p className="font-bold">Address</p>
                   <p>
-                    1-8-694, 95/S.R.T. Prakash Nagar, Begumpet, Hyderabad 500016
+                    {/* 1-8-694, 95/S.R.T. Prakash Nagar, Begumpet, Hyderabad 500016 */}
+                    1-10-27/5/1 Prakash nagar Extn, Nr Hanuman Temple Post office, Hyderabad 500016
                   </p>
                 </div>
               </div>
