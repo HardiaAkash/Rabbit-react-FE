@@ -101,7 +101,7 @@ const RestrictedItem = () => {
               key={index}
               className="flex flex-col justify-between items-center w-[45%] sm:w-[30%] md:w-[30%] lg:w-[30%] xl:w-[30%] mb-10"
             >
-              <ImageComponent className="w-12 h-12" />
+              <img src={ImageComponent} alt="loading" className="w-12 h-12" />
               <p className="text-lg font-semibold mt-2 text-center">{r.name}</p>
             </div>
           );

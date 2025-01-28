@@ -389,7 +389,7 @@ const Country = () => {
               className="bg-white px-[35px] py-[23px] rounded-lg flex flex-col items-center border border-[#3333331A]"
               style={{ width: "200px", height: "150px" }}
             >
-              <ImageComponent />
+              <img src={ImageComponent} alt="loading"/>
               <p className="text-base font-semibold mt-2 text-center">
                 Ship to {c.name}
               </p>
