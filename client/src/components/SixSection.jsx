@@ -53,7 +53,7 @@ const SixSection = () => {
           title="map"
         ></iframe> */}
         <iframe
-          src={`https://www.google.com/maps/embed/v1/place?key=${key}&q=Rabbit+Speed`}
+          src={`https://www.google.com/maps/embed/v1/place?key=${key}&q=17.44185251665171,78.46870945285278`}
           className="w-full h-[200px] sm:h-[300px] lg:h-[400px]"
           style={{ border: "0" }}
           allowFullScreen=""
