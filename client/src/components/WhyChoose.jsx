@@ -47,8 +47,8 @@ const cards = [
 
 const WhyChoose = () => {
   // const baseurl = process.env.VITE_API_BASE_URL;
-  const [responseMessage, setResponseMessage] = useState(""); 
-  const [isLoading, setIsLoading] = useState(false); 
+  const [responseMessage, setResponseMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const formik = useFormik({
     initialValues: {
@@ -61,7 +61,7 @@ const WhyChoose = () => {
       message: "", // Added message field
     },
     onSubmit: async (values) => {
-      setIsLoading(true); 
+      setIsLoading(true);
       try {
         const response = await axios.post(`/api/enquiry`, {
           customerName: values.customerName,
@@ -73,12 +73,14 @@ const WhyChoose = () => {
           message: values.message,
         });
         formik.resetForm();
-        setResponseMessage(response.data.message); 
+        setResponseMessage(response.data.message);
       } catch (err) {
-        setResponseMessage("There was an error submitting your enquiry. Please try again.");
+        setResponseMessage(
+          "There was an error submitting your enquiry. Please try again."
+        );
         console.log("Error in Shipping Calculation", err);
       }
-      setIsLoading(false); 
+      setIsLoading(false);
     },
   });
 
@@ -108,7 +110,11 @@ const WhyChoose = () => {
                   className="bg-white w-[100px] h-[150px] sm:w-[120px] sm:h-[170px] lg:w-[150px] lg:h-[180px] flex justify-center flex-col items-center rounded-[10px] bg-[linear-gradient(144.33deg,_#FFFFFF_78.21%,_#FFDCE8_100%)] px-2"
                 >
                   {/* <ImageComponent className="w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] lg:w-[70px] lg:h-[70px]" /> */}
-                  <img src={ImageComponent} alt="loading" className="w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] lg:w-[70px] lg:h-[70px]"/>
+                  <img
+                    src={ImageComponent}
+                    alt="loading"
+                    className="w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] lg:w-[70px] lg:h-[70px]"
+                  />
 
                   <p className="text-center text-xs sm:text-sm lg:text-base mt-2">
                     {c.name}
@@ -195,10 +201,10 @@ const WhyChoose = () => {
                   <option value="canada">Canada</option>
                   <option value="europe">Europe</option>
                   <option value="newzealand">New Zealand</option>
-                  <option value="uk">UK</option>
-                  <option value="uae">UAE</option>
-                  <option value="usa">USA</option>
                   <option value="othercountry">Other Country</option>
+                  <option value="uae">UAE</option>
+                  <option value="uk">UK</option>
+                  <option value="usa">USA</option>
                 </select>
               </div>
             </div>
@@ -208,11 +214,19 @@ const WhyChoose = () => {
                 <label htmlFor="phone">Phone Number*</label>
                 <input
                   className="w-full border border-[#1111111A] rounded-lg focus-visible:outline-none pl-3 h-[44px] focus-visible:border-black mt-1.5"
-                  type="tel"
-                  onChange={formik.handleChange}
+                  type="text"
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    if (/^\d*$/.test(value)) {
+                      formik.setFieldValue("phone", value); // Only update if it's numeric
+                    }
+                  }}
                   value={formik.values.phone}
                   required
                   name="phone"
+                  inputMode="numeric"
+                  pattern="[0-9]*"
+                  style={{ appearance: "textfield" }}
                 />
               </div>
               <div className="w-full">
@@ -245,17 +259,15 @@ const WhyChoose = () => {
           <button
             className="w-fit px-[32px] py-[16px] rounded-full bg-[#AF1E22] text-white mt-[30px] lg:mt-[100px] float-right"
             type="submit"
-            disabled={isLoading} 
+            disabled={isLoading}
           >
             {isLoading ? "Submitting..." : "Get Enquiry"} {/* Loader text */}
           </button>
-          
-        {responseMessage && (
-          <p className="text-black-500 text-start mt-4">{responseMessage}</p>
-        )}
-        </form>
 
-     
+          {responseMessage && (
+            <p className="text-black-500 text-start mt-4">{responseMessage}</p>
+          )}
+        </form>
       </div>
     </div>
   );
