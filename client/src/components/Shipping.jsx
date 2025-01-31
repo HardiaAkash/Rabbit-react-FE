@@ -1136,9 +1136,9 @@ const Shipping = () => {
                 <option value="EUROPE">Europe</option>
                 <option value="GULF_COUNTRIES">Gulf Country</option>
                 <option value="NEW_ZEALAND">New Zealand</option>
-                <option value="OTHER_COUNTRIES">Other Country</option>
                 <option value="GREAT_BRITIAN_UK">UK</option>
                 <option value="USA">USA</option>
+                <option value="OTHER_COUNTRIES">Other Country</option>
                 {/* <option value="uae">UAE</option> */}
               </select>
             </div>

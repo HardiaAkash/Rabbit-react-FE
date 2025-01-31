@@ -201,10 +201,10 @@ const WhyChoose = () => {
                   <option value="canada">Canada</option>
                   <option value="europe">Europe</option>
                   <option value="newzealand">New Zealand</option>
-                  <option value="othercountry">Other Country</option>
                   <option value="uae">UAE</option>
                   <option value="uk">UK</option>
                   <option value="usa">USA</option>
+                  <option value="othercountry">Other Country</option>
                 </select>
               </div>
             </div>
