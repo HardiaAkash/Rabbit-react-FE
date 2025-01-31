@@ -48,7 +48,7 @@ const ThirdSection = () => {
       >
         View All
       </button>
-      <img src={Rabbit2} alt="Rabbit Image" className="mt-8" />
+      <img src={Rabbit2} alt="Rabbit" className="mt-8" />
 
       <Modal
         open={isModalOpen}

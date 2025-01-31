@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.5857db81.css",
-    "main.js": "/static/js/main.7b231fb2.js",
+    "main.css": "/static/css/main.f038987a.css",
+    "main.js": "/static/js/main.0244f55f.js",
     "static/js/14.0d299927.chunk.js": "/static/js/14.0d299927.chunk.js",
-    "static/js/60.25e0cbe4.chunk.js": "/static/js/60.25e0cbe4.chunk.js",
+    "static/js/60.a6971ac9.chunk.js": "/static/js/60.a6971ac9.chunk.js",
     "static/js/490.8b99672a.chunk.js": "/static/js/490.8b99672a.chunk.js",
     "static/js/593.749d41ed.chunk.js": "/static/js/593.749d41ed.chunk.js",
     "static/js/637.5e3e4fa8.chunk.js": "/static/js/637.5e3e4fa8.chunk.js",
@@ -132,10 +132,10 @@
     "static/media/russian-federation.svg": "/static/media/russian-federation.f6927a47f04561df288b335531d94983.svg",
     "static/media/email.svg": "/static/media/email.1f791aa8eac2377740b0420dc0c92068.svg",
     "index.html": "/index.html",
-    "main.5857db81.css.map": "/static/css/main.5857db81.css.map",
-    "main.7b231fb2.js.map": "/static/js/main.7b231fb2.js.map",
+    "main.f038987a.css.map": "/static/css/main.f038987a.css.map",
+    "main.0244f55f.js.map": "/static/js/main.0244f55f.js.map",
     "14.0d299927.chunk.js.map": "/static/js/14.0d299927.chunk.js.map",
-    "60.25e0cbe4.chunk.js.map": "/static/js/60.25e0cbe4.chunk.js.map",
+    "60.a6971ac9.chunk.js.map": "/static/js/60.a6971ac9.chunk.js.map",
     "490.8b99672a.chunk.js.map": "/static/js/490.8b99672a.chunk.js.map",
     "593.749d41ed.chunk.js.map": "/static/js/593.749d41ed.chunk.js.map",
     "637.5e3e4fa8.chunk.js.map": "/static/js/637.5e3e4fa8.chunk.js.map",
@@ -145,7 +145,7 @@
     "477.7043cf51.chunk.js.map": "/static/js/477.7043cf51.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5857db81.css",
-    "static/js/main.7b231fb2.js"
+    "static/css/main.f038987a.css",
+    "static/js/main.0244f55f.js"
   ]
 }
