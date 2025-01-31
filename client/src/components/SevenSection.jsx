@@ -8,7 +8,7 @@ const SevenSection = () => {
       <div className="flex flex-col lg:flex-row justify-between pt-[38px] pb-[45px] border-b border-[#FFFFFF1A] items-center">
         <div className="mb-8 lg:mb-0">
           {/* <Rabbit /> */}
-          <img src={Rabbit} alt="loading"/>
+          <img src={Rabbit} alt="loading" />
         </div>
         <div className="mb-8 lg:mb-0">
           <p className="text-lg font-bold">Explore</p>
@@ -43,7 +43,7 @@ const SevenSection = () => {
               rel="noreferrer"
             >
               {/* <Facebook /> */}
-              <img src={Facebook} alt="loading"/>
+              <img src={Facebook} alt="loading" />
             </a>
             <a
               href="https://www.instagram.com/rabbitspeedinternational?igsh=c3ZwYmhxeWowNmd2&utm_source=qr"
@@ -51,7 +51,7 @@ const SevenSection = () => {
               rel="noreferrer"
             >
               {/* <InstaGram /> */}
-              <img src={InstaGram} alt="loading"/>
+              <img src={InstaGram} alt="loading" />
             </a>
           </div>
         </div>
@@ -59,7 +59,7 @@ const SevenSection = () => {
       <div className="flex flex-col lg:flex-row justify-between mt-[13px] text-center lg:text-left">
         <p>A Unit of Rabbit International Cargo Systems Pvt. Ltd.</p>
         <p className="mt-4 lg:mt-0">
-          Copyright @2024 Rabbit. All rights reserved.
+          Copyright @2025 Rabbit Speed. All rights reserved.
         </p>
       </div>
     </div>

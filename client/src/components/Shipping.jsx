@@ -1,7 +1,7 @@
 import { useFormik } from "formik";
 import axios from "axios";
 import { useState } from "react";
-import * as Yup from 'yup';
+import * as Yup from "yup";
 
 const shippingRates = [
   {
@@ -1059,10 +1059,10 @@ const Shipping = () => {
       const baseRate = shippingRates.find((r) => r.weight === "30-50");
       // console.log(baseRate);
       // console.log(countryUpper);
-      
+
       const perKgRate = baseRate[countryUpper];
       // console.log(perKgRate);
-      
+
       const additionalWeight = weight - 30;
       cost = 21900 + additionalWeight * perKgRate;
     } else if (typeof rate.weight === "string") {
@@ -1134,12 +1134,12 @@ const Shipping = () => {
                 <option value="AUSTRALIA">Australia</option>
                 <option value="CANADA">Canada</option>
                 <option value="EUROPE">Europe</option>
-                <option value="NEW_ZEALAND">New Zealand</option>
                 <option value="GREAT_BRITIAN_UK">UK</option>
-                {/* <option value="uae">UAE</option> */}
-                <option value="USA">USA</option>
                 <option value="GULF_COUNTRIES">Gulf Country</option>
+                <option value="NEW_ZEALAND">New Zealand</option>
                 <option value="OTHER_COUNTRIES">Other Country</option>
+                <option value="USA">USA</option>
+                {/* <option value="uae">UAE</option> */}
               </select>
             </div>
             <div className="w-full">

@@ -11,8 +11,8 @@ import { useState } from "react";
 
 const ContactUs = () => {
   // const baseurl = process.env.VITE_API_BASE_URL;
-  const [responseMessage, setResponseMessage] = useState(""); 
-  const [isLoading, setIsLoading] = useState(false); 
+  const [responseMessage, setResponseMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const formik = useFormik({
     initialValues: {
@@ -22,7 +22,7 @@ const ContactUs = () => {
       message: "",
     },
     onSubmit: async (values) => {
-      setIsLoading(true); 
+      setIsLoading(true);
       try {
         const response = await axios.post(`/api/enquiry/contact`, {
           fullName: values.fullName,
@@ -31,17 +31,21 @@ const ContactUs = () => {
           message: values.message,
         });
         formik.resetForm();
-        setResponseMessage(response.data.message || "Enquiry sent successfully!"); // Show success message from response
+        setResponseMessage(
+          response.data.message || "Enquiry sent successfully!"
+        ); // Show success message from response
       } catch (err) {
-        setResponseMessage("There was an error submitting your enquiry. Please try again.");
+        setResponseMessage(
+          "There was an error submitting your enquiry. Please try again."
+        );
         console.log("Error in Contact Form Submission", err);
       }
-      setIsLoading(false); 
+      setIsLoading(false);
     },
   });
 
   return (
-    <div className="bg-[#e7ecff] p-4">
+    <div className="bg-[#e7ecff] p-4" id="contact-us">
       <div className="w-full max-w-[1200px] mx-auto rounded-[23px] overflow-hidden">
         <div className="flex flex-col lg:flex-row w-full">
           <div className="w-full lg:w-[35%] bg-[#AF1E22] p-6">
@@ -94,14 +98,18 @@ const ContactUs = () => {
                   <p className="font-bold">Address</p>
                   <p>
                     {/* 1-8-694, 95/S.R.T. Prakash Nagar, Begumpet, Hyderabad 500016 */}
-                    1-10-27/5/1 Prakash nagar Extn, Nr Hanuman Temple Post office, Hyderabad 500016
+                    1-10-27/5/1 Prakash nagar Extn, Nr Hanuman Temple Post
+                    office, Hyderabad 500016
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <form onSubmit={formik.handleSubmit} className="bg-white w-full lg:w-[65%] lg:px-[40px] pt-[40px] mt-8 lg:mt-0 px-5 pb-5 lg:pb-8">
+          <form
+            onSubmit={formik.handleSubmit}
+            className="bg-white w-full lg:w-[65%] lg:px-[40px] pt-[40px] mt-8 lg:mt-0 px-5 pb-5 lg:pb-8"
+          >
             <div>
               <div className="w-full">
                 <label htmlFor="fullName" className="block font-medium">
@@ -125,8 +133,8 @@ const ContactUs = () => {
                   <input
                     className="w-full border border-[#1111111A] rounded-lg focus-visible:outline-none pl-3 h-[44px] focus-visible:border-black mt-1.5"
                     type="number"
-                     step="any"
-                    name="contact"  
+                    step="any"
+                    name="contact"
                     value={formik.values.contact}
                     onChange={formik.handleChange}
                     required
@@ -159,21 +167,19 @@ const ContactUs = () => {
                 />
               </div>
               {responseMessage && (
-            <p className="text-black-500 text-left mt-4">{responseMessage}</p>
-          )}
+                <p className="text-black-500 text-left mt-4">
+                  {responseMessage}
+                </p>
+              )}
               <button
                 type="submit"
                 className="bg-[#AF1E22] py-4 px-8 w-full lg:w-fit text-white rounded-full mt-[24px] lg:mt-[32px]"
-                disabled={isLoading} 
+                disabled={isLoading}
               >
                 {isLoading ? "Submitting..." : "Submit"} {/* Loader text */}
               </button>
             </div>
-           
           </form>
-
-       
-        
         </div>
       </div>
     </div>

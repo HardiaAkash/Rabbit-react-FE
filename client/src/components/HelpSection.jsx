@@ -12,7 +12,7 @@ const HelpSection = () => {
         </h3>
         <div className="flex gap-2.5">
           {/* <Contact /> */}
-          <img src={Contact} alt="loading"/>
+          <img src={Contact} alt="loading" />
           <div>
             <p className="text-base lg:text-lg font-normal">
               Have Any Questions:
@@ -20,9 +20,11 @@ const HelpSection = () => {
             <p className="text-base lg:text-lg font-normal">+91 7207775166</p>
           </div>
         </div>
-        <button className="bg-[#AF1E22] px-8 py-4 rounded-full mt-[40px]">
-          Raise a Query
-        </button>
+        <a href="#contact-us">
+          <button className="bg-[#AF1E22] px-8 py-4 rounded-full mt-[40px]">
+            Raise a Query
+          </button>
+        </a>
       </div>
     </div>
   );
