@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../assets/logo/logo.png";
+import Logo from "../assets/logo/logo.svg";
 import Contact from "../assets/image/contact.svg";
 import { HiMenu, HiX } from "react-icons/hi";
 import { useNavigate } from "react-router-dom";
@@ -48,7 +48,7 @@ function Navbar() {
             href="#work"
             className="text-base lg:text-sm xl:text-base text-black font-semibold xl:text-lg"
           >
-            How we Work
+            How We Work
           </a>
           <a
             href="#choose"

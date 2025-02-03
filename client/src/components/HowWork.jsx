@@ -50,7 +50,7 @@ const HowWork = () => {
               <p className="text-lg md:text-xl lg:text-2xl font-bold mt-5 h-[40px]">
                 {w.title}
               </p>
-              <div className="text-sm md:text-base lg:text-lg font-normal mt-2.5">
+              <div className="text-sm md:text-base lg:text-lg font-normal mt-5">
                 {w.description}
               </div>
             </div>
