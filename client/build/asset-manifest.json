@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.f038987a.css",
-    "main.js": "/static/js/main.0244f55f.js",
+    "main.js": "/static/js/main.4668ae7b.js",
     "static/js/14.0d299927.chunk.js": "/static/js/14.0d299927.chunk.js",
-    "static/js/60.a6971ac9.chunk.js": "/static/js/60.a6971ac9.chunk.js",
+    "static/js/60.46e1b356.chunk.js": "/static/js/60.46e1b356.chunk.js",
     "static/js/490.8b99672a.chunk.js": "/static/js/490.8b99672a.chunk.js",
     "static/js/593.749d41ed.chunk.js": "/static/js/593.749d41ed.chunk.js",
     "static/js/637.5e3e4fa8.chunk.js": "/static/js/637.5e3e4fa8.chunk.js",
@@ -50,6 +50,7 @@
     "static/media/newzealand.svg": "/static/media/newzealand.df466c6909a40ac45619f25cec1bc85d.svg",
     "static/media/b2b.png": "/static/media/b2b.52107ee16b7e9c882d67.png",
     "static/media/kenya.svg": "/static/media/kenya.23e2e9659f337b0e9233a0e39514d770.svg",
+    "static/media/logo.svg": "/static/media/logo.6c414d495b2d304ee36bece038b25a7e.svg",
     "static/media/uk.svg": "/static/media/uk.7ab3dc86ffd84c3c084d9336daf8f2f6.svg",
     "static/media/portugal.svg": "/static/media/portugal.3f94930d9f9743a218a8e7039d9300a2.svg",
     "static/media/usa.svg": "/static/media/usa.dca6b818bf1e950fc1a9d3608ca12005.svg",
@@ -133,9 +134,9 @@
     "static/media/email.svg": "/static/media/email.1f791aa8eac2377740b0420dc0c92068.svg",
     "index.html": "/index.html",
     "main.f038987a.css.map": "/static/css/main.f038987a.css.map",
-    "main.0244f55f.js.map": "/static/js/main.0244f55f.js.map",
+    "main.4668ae7b.js.map": "/static/js/main.4668ae7b.js.map",
     "14.0d299927.chunk.js.map": "/static/js/14.0d299927.chunk.js.map",
-    "60.a6971ac9.chunk.js.map": "/static/js/60.a6971ac9.chunk.js.map",
+    "60.46e1b356.chunk.js.map": "/static/js/60.46e1b356.chunk.js.map",
     "490.8b99672a.chunk.js.map": "/static/js/490.8b99672a.chunk.js.map",
     "593.749d41ed.chunk.js.map": "/static/js/593.749d41ed.chunk.js.map",
     "637.5e3e4fa8.chunk.js.map": "/static/js/637.5e3e4fa8.chunk.js.map",
@@ -146,6 +147,6 @@
   },
   "entrypoints": [
     "static/css/main.f038987a.css",
-    "static/js/main.0244f55f.js"
+    "static/js/main.4668ae7b.js"
   ]
 }
