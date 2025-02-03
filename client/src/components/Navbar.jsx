@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../assets/logo/logo.svg";
+import Logo from "../assets/logo/logo2.png";
 import Contact from "../assets/image/contact.svg";
 import { HiMenu, HiX } from "react-icons/hi";
 import { useNavigate } from "react-router-dom";
